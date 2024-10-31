@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start --keepAliveTimeout 70000",
+    "auto": "next build && next start --keepAliveTimeout 70000",
     "lint": "next lint"
   },
   "dependencies": {
