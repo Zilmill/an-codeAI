@@ -34,6 +34,7 @@ export interface Settings {
   geminiApiKey: string;
   anthropicApiKey: string;
   anthropicBaseURL: string | null;
+  llm_model: string;
 }
 
 export enum AppState {

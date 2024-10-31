@@ -135,7 +135,8 @@ export async function streamingOpenAIResponses(
     llm: string;
     geminiApiKey: any;
     anthropicApiKey: any;
-    anthropicBaseURL: any
+    anthropicBaseURL: any;
+    llm_model: string;
   }
 ) {
   if (params.llm === "gemini") {
@@ -208,7 +209,7 @@ export async function streamingOpenAIResponses(
   });
 
   const stream = await openai.chat.completions.create({
-    model: 'gpt-4o-2024-05-13',
+    model: params.llm_model || 'gpt-4o-2024-05-13',
     temperature: 0,
     max_tokens: 4096,
     messages,
